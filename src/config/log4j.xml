@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" >
+<log4j:configuration>
+  <!-- APPENDERS LIST -->
+  <!-- show log entries on console -->
+  <appender name="consoleAppender" class="org.apache.log4j.ConsoleAppender">
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%m%n"/>
+    </layout>
+  </appender> 
+  <!-- log all logs to a separate log file every day--> 
+  <appender name="fileAppender" class="org.apache.log4j.DailyRollingFileAppender">
+    <param name="file" value="KirtanTitleFinder.log" />
+    <param name="datePattern" value="'.'yyyy-MM-dd" />
+    <param name="append" value="false" />
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%m%n"/>
+    </layout>
+  </appender>
+  <!-- log all logs to a separate log file every day--> 
+  <appender name="masterFileAppender" class="org.apache.log4j.DailyRollingFileAppender">
+    <param name="file" value="masterFile.log" />
+    <param name="append" value="false" />
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%m%n"/>
+    </layout>
+  </appender>
+
+<logger name="Master" >
+	 <level value="info" />
+	<appender-ref ref="masterFileAppender"/>
+</logger>
+
+
+  <root>
+    <priority value="info"></priority>
+        <appender-ref ref="consoleAppender"/>
+         <appender-ref ref="fileAppender"/>
+  </root>
+</log4j:configuration>
