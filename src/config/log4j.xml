@@ -31,10 +31,28 @@
 	<appender-ref ref="masterFileAppender"/>
 </logger>
 
+  <logger name="org.jaudiotagger">
+    <!-- level info logs -->
+    <level value="error" />
+    <appender-ref ref="consoleAppender"/>
+  </logger>
+  
 
-  <root>
+  <logger name="com.jkp">
+    <level value="info" />
+    <appender-ref ref="consoleAppender"/>
+    <appender-ref ref="fileAppender"/>
+  </logger>
+  
+    <logger name="org.jkp">
+    <level value="info" />
+    <appender-ref ref="consoleAppender"/>
+    <appender-ref ref="fileAppender"/>
+  </logger>
+<!--  <root>
     <priority value="info"></priority>
         <appender-ref ref="consoleAppender"/>
          <appender-ref ref="fileAppender"/>
   </root>
+  -->
 </log4j:configuration>
