@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<anttasks:AntTask xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:anttasks="http://at.bestsolution.efxclipse.tooling.jdt/1.0" buildDirectory="${workspace}/KirtanTitleFinder/build">
+  <deploy>
+    <application name="KirtanTitleFinder" mainclass="com.jkp.mp3tag.JavaFX" version="1.0"/>
+    <info vendor="Vishal Gupta"/>
+  </deploy>
+  <signjar/>
+</anttasks:AntTask>
